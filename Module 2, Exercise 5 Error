@@ -1,0 +1,36 @@
+ktamg2@1b6946be137d:~$ twarc search canada150 > search.json
+ktamg2@1b6946be137d:~$ sudo npm install json2csv --save -g
+[sudo] password for ktamg2: 
+/usr/bin/json2csv -> /usr/lib/node_modules/json2csv/bin/json2csv.js
+/usr/lib
+└─┬ json2csv@3.9.1 
+  ├─┬ cli-table@0.3.1 
+  │ └── colors@1.0.3 
+  ├── commander@2.11.0 
+  ├─┬ debug@2.6.8 
+  │ └── ms@2.0.0 
+  ├─┬ flat@2.0.1 
+  │ └── is-buffer@1.1.5 
+  ├── lodash.clonedeep@4.5.0 
+  ├── lodash.flatten@4.4.0 
+  ├── lodash.get@4.4.2 
+  ├── lodash.set@4.3.2 
+  ├── lodash.uniq@4.5.0 
+  └── path-is-absolute@1.0.1 
+ktamg2@1b6946be137d:~$ json2csv -i search.json -o out.csv
+module.js:433
+    throw err;
+    ^
+
+SyntaxError: /home/ktamg2/search.json: Unexpected token {
+    at Object.parse (native)
+    at Object.Module._extensions..json (module.js:430:27)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:20:19)
+    at getInput (/usr/lib/node_modules/json2csv/bin/json2csv.js:57:13)
+    at /usr/lib/node_modules/json2csv/bin/json2csv.js:103:3
+    at getFields (/usr/lib/node_modules/json2csv/bin/json2csv.js:48:5)
+    at Object.<anonymous> (/usr/lib/node_modules/json2csv/bin/json2csv.js:98:1)
+ktamg2@1b6946be137d:~$
