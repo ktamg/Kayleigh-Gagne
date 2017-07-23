@@ -1,0 +1,9 @@
+    1  nano ids.txt
+    2  twarc hydrate ids.txt > tweets.json
+    3  nano tweets.json
+    4  nano json2csv.py
+    5  python json2csv.py tweets.json > out.csv
+    6  ls
+    7  sudo npm install json2csv --save -g
+    8  json2csv -i search.json -o out.csv
+    9  history > module2ex5commands
