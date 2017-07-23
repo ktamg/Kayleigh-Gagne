@@ -1,0 +1,18 @@
+    1  mkdir ocr-test
+    2  cd ocr-test/
+    3  sudo apt-get install tesseract-ocr
+    4  sudo apt-get install imagemagick
+    5  sudo apt-get install pdftk
+    6  pwd
+    7  cd ktamg2
+    8  cd pwd
+    9  cd \ktamg2
+   10  cd
+   11  pwd
+   12  wget http://collections.banq.qc.ca:8008/jrn03/equity/src/1957/07/04/83471_1957-07-04.pdf
+   13  ls
+   14  pdtk <83471_1957-07-04.pdf> burst
+   15  pdftk 83471_1957-07-04.pdf burst
+   16  convert -density 300 pg_0001.pdf -depth 8 -strip -background white -alpha off file.tiff
+   17  tesseract file.tiff output.txt
+   18  history > module2ex6tesseractcommands
